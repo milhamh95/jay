@@ -15,4 +15,8 @@ defmodule Jay do
   def hello do
     :world
   end
+
+  def to_json(term \\ hello()) do
+    Jason.encode!(term)
+  end
 end
